@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherForecastApp</string>
+
+    <string name="city_name">City Name</string>
+    <string name="send_request">Check</string>
+    <string name="search">Search</string>
+    <string name="loading">Loading…</string>
+    <string name="error_message">Something went wrong....</string>
+
+</resources>
