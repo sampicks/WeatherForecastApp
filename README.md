@@ -57,12 +57,17 @@ Connect an Android device to your development machine.
 
 Each time you press the `Search` button after providing input a valid `city name`. `WeatherForecast API` provides data if available for asked location. If request is successful, it displays current weather and next 5 days weather forecast also. In case of no data found app shows error.
 
-## Screenshot
+## Screenshots
 <img src="https://github.com/user-attachments/assets/0074bff4-5c30-4ddf-b688-3f917740091d" width="150" height="280">
 
 <img src="https://github.com/user-attachments/assets/e783435a-986d-4a3a-b02f-054b1e4865c8" width="150" height="280">
 
 <img src="https://github.com/user-attachments/assets/1c5cf3cc-1860-4fe5-9e00-e66fdc9a7252" width="150" height="280">
+
+## Unit Test
+We have written 3 unit test cases for success, failure, error output respectively. 
+
+<img src="https://github.com/user-attachments/assets/d8b4a1dc-da5c-46ee-b0ad-7af95c7ff664" width="350" height="100">
 
 ## Contributing
 
