@@ -4,6 +4,12 @@ WeatherForecastApp is application developed in android native with mvvm architec
 
 ## Feature
 This application provides weather forecast for 5 days with useful information.
+## Approach to development
+This application has been designed with MVVM architectural pattern.
+* `Model` - Model class will be holding data in our case `WeatherResponseModel` is the model which will be holding response of API
+* `ViewModel` - Heart of MVVM architecture. `WeatherViewModel` is our viewmodel that is being subscribed by Views. Currently We are fetching API calls to decide of flow of applicaiton.
+* `View` - View is just for rendering the UI. It accepts user input and render the UI as decided by business logic. `MainActivity` is our view class.
+Since there is a few no. of classes hence MVVM alone is sufficient for this if there is need to include more features, then We can go with clean architecture with MVVM design pattern.
 
 ## Building the App
 First, clone the repo:
