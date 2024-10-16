@@ -100,16 +100,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(weatherData: WeatherResponseModel?) {
         weatherData?.location.let { location ->
-            binding.tvCity.text ="Name: ${location?.name}"
+            binding.tvCity.text =location?.name
         }
 
         weatherData?.current.let { current ->
             current?.condition.let { condition ->
-                binding.tvCondition.text ="Condition: ${condition?.text}"
+                binding.tvCondition.text =if(condition?.text?.length!! >6) condition?.text else "Condition- ${condition?.text}"
                 setResultImage(condition?.icon)
             }
-            binding.tvCelc.text ="Celcius: ${current?.tempC}"
-            binding.tvHumid.text ="Humidity: ${current?.humidity}"
+            binding.tvCelc.text ="${current?.tempC}°C"
+            binding.tvHumid.text ="Humid- ${current?.humidity}"
         }
 
         weatherData?.forecast.let { forecast->

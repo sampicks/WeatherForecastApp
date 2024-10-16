@@ -11,7 +11,7 @@ class Utils {
             var formatter = SimpleDateFormat("yyyy-MM-dd")
             val newDate =  formatter.parse(strDate)
             var newDateFormat = SimpleDateFormat(
-                "dd-MMM-yyyy"
+                "dd MMM"
             )
             val stringDate: String = newDateFormat.format(newDate)
 

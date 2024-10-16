@@ -35,10 +35,10 @@ class WeatherForecastAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(singleDayforeCast: Forecastday) {
 
-            binding.tvDate.text = "Date : ${singleDayforeCast.date?.let { Utils.formatDate(it) }}"
-            binding.tvMax.text = "Max Temp : ${singleDayforeCast.day?.maxtempC.toString()}"
-            binding.tvMin.text = "Min Temp : ${singleDayforeCast.day?.mintempC.toString()}"
-            binding.tvHumid.text = "Humidity : ${singleDayforeCast.day?.avghumidity.toString()}"
+            binding.tvDate.text = "${singleDayforeCast.date?.let { Utils.formatDate(it) }}"
+            binding.tvMax.text = "Max- ${singleDayforeCast.day?.maxtempC.toString()}°C"
+            binding.tvMin.text = "Min- ${singleDayforeCast.day?.mintempC.toString()}°C"
+            binding.tvHumid.text = "Humid- ${singleDayforeCast.day?.avghumidity.toString()}"
 
             singleDayforeCast.day?.condition?.icon.let { url ->
                 Glide.with(binding.imageview.context)

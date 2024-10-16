@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WeatherForecastApp</string>
+    <string name="app_name">Weather Forecast</string>
 
     <string name="city_name">City Name</string>
     <string name="send_request">Check</string>
