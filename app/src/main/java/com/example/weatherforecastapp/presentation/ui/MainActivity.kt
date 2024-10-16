@@ -2,6 +2,7 @@ package com.example.weatherforecastapp.presentation.ui
 
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -39,6 +40,13 @@ class MainActivity : AppCompatActivity() {
             } else {
                 // Get weather data
                 weatherViewModel.getWeatherData(binding.etCityName.text.toString())
+
+                val view: View? = this.currentFocus
+                if (view != null) {
+                    val inputMethodManager =
+                        getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                    inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0)
+                }
             }
         }
         observeFlowData()

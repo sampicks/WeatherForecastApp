@@ -1,11 +1,14 @@
 package com.example.weatherforecastapp.presentation.ui.adapter
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.weatherforecastapp.databinding.CardViewDesignBinding
 import com.example.weatherforecastapp.data.model.Forecastday
+import com.example.weatherforecastapp.utils.Utils
 
 class WeatherForecastAdapter(
     private val largeNewsList: List<Forecastday>?
@@ -31,7 +34,8 @@ class WeatherForecastAdapter(
         private val binding: CardViewDesignBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(singleDayforeCast: Forecastday) {
-            binding.tvDate.text = "Date : ${singleDayforeCast.date}"
+
+            binding.tvDate.text = "Date : ${singleDayforeCast.date?.let { Utils.formatDate(it) }}"
             binding.tvMax.text = "Max Temp : ${singleDayforeCast.day?.maxtempC.toString()}"
             binding.tvMin.text = "Min Temp : ${singleDayforeCast.day?.mintempC.toString()}"
             binding.tvHumid.text = "Humidity : ${singleDayforeCast.day?.avghumidity.toString()}"
